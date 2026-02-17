@@ -1,0 +1,23 @@
+Host: gal-c1.charlotte.edu
+Start: Mon Feb 16 11:25:41 PM EST 2026
+rm -rf bin
+mkdir -p bin
+./scripts/setup_deps.sh
+Deps ready.
+g++ -O2 -std=c++17 -Wall -Wextra -pthread -Ithird_party/rapidjson/include -o bin/bfs_seq src/sequential.cpp -lcurl
+g++ -O2 -std=c++17 -Wall -Wextra -pthread -Ithird_party/rapidjson/include -o bin/bfs_par src/parallel.cpp -lcurl
+Sequential:
+Level 0 count: 1
+Level 1 count: 39
+Level 2 count: 848
+Level 3 count: 5023
+Time to crawl (sequential): 71.9012s
+
+Parallel:
+Level 0 count: 1
+Level 1 count: 39
+Level 2 count: 848
+Level 3 count: 5023
+Time to crawl (parallel): 9.33999s
+Max threads: 8
+End: Mon Feb 16 11:27:05 PM EST 2026

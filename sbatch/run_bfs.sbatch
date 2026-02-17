@@ -5,6 +5,7 @@
 #SBATCH --time=00:05:00
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=1G
+#SBATCH --partition=Centaurus
 
 echo "Host: $(hostname)"
 echo "Start: $(date)"

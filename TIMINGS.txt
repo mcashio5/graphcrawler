@@ -1,0 +1,6 @@
+Centaurus benchmark
+Node: "Tom Hanks"
+Depth: 3
+
+Sequential time: _____ s
+Parallel time (max_threads=8): _____ s
